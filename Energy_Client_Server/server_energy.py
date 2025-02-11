@@ -60,7 +60,8 @@ def start_server():
     print(f"Server started at {SERVER_IP}:{SERVER_PORT}. Waiting for connections...")
 
     # Start resource monitoring in a separate thread
-    resource_monitor_thread = threading.Thread(target=log_resource_usage)
+    resource_monitor_thread = threading.Thread(
+        target=log_resource_usage)
     resource_monitor_thread.daemon = True
     resource_monitor_thread.start()
 
